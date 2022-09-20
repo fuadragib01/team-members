@@ -1,15 +1,9 @@
-import { useBlockProps } from "@wordpress/block-editor";
+import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 
 const Save = ({ attributes }) => {
-	const {
-		blockId,
-	} = attributes;
-
 	return (
-		<div {...useBlockProps.save()}>
-			<div className={`block-wrapper ${blockId}`} data-id={blockId}>
-				{/* ... */}
-			</div>
+		<div>
+			<InnerBlocks.Content />
 		</div>
 	);
 };

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Plugin Name:     Plugin Name
- * Plugin URI:      https://jamiluddin.me/
- * Description:     Plugin Description
+ * Plugin Name:     Team Members
+ * Plugin URI:      https://fuadragib.me/
+ * Description:     Simple Team Members manage plugin for gutenberg
  * Version:         1.0.0
- * Author:          MD Jamil Uddin
- * Author URI:      https://jamiluddin.me/
+ * Author:          MD Fuad Ragib
+ * Author URI:      https://fuadragib.me/
  * License:         GPL-3.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:     plugin-name
+ * Text Domain:     team-members
  *
- * @package         plugin-name
+ * @package         team-members
  */
 
 /**

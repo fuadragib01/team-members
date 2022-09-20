@@ -1,10 +1,10 @@
 {
-	"name": "plugin-slug/plugin-name",
-	"title": "Block Prototype",
+	"name": "plugin-slug/team-members",
+	"title": "Team Members",
 	"category": "widgets",
-	"description": "Block Description",
-	"textdomain": "plugin-name",
-	"keywords": ["block", "prototype"],
+	"description": "Simple gutemberg plugin to manage Team Members",
+	"textdomain": "team-members",
+	"keywords": ["team", "members", "block"],
 	"supports": {
 		"align": true
 	},

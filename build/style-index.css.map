@@ -1,0 +1,1 @@
+{"version":3,"file":"./style-index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://team-members/./src/style.scss"],"sourcesContent":[".block-wrapper {\r\n    box-sizing: border-box;\r\n}"],"names":[],"sourceRoot":""}
