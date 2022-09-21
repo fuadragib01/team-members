@@ -1,3 +1,26 @@
-.block-wrapper {
-    box-sizing: border-box;
+.wp-block-plugin-slug-team-members{
+    display: flex;
+    flex-wrap: wrap;
+    @for $i from 1 through 6 {
+        &.has-#{$i}-columns {
+            .wp-block-plugin-slug-team-member {
+                width: calc(100% / #{$i});
+            }
+        }
+    }
+    .wp-block-plugin-slug-team-member{
+        margin-bottom: 20px;
+        h4 {
+            color: #222;
+            font-size: 25px;
+            font-weight: 500;
+            margin: 0;
+        }
+        p {
+            color: #565656;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 5px 0;
+        }
+    }
 }

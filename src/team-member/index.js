@@ -29,6 +29,22 @@ registerBlockType("plugin-slug/team-member", {
             source: "html",
             selector: "p",
         },
+        imgId: {
+            type: "number",
+        },
+        imgAlt: {
+            type: "string",
+            source: "attribute",
+            selector: "img",
+            attribute: "alt",
+            default: "",
+        },
+        imgUrl: {
+            type: "string",
+            source: "attribute",
+            selector: "img",
+            attribute: "src",
+        },
     },
     description: __("A team member item", "team-members"),
     edit: Edit,

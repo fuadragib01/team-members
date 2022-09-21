@@ -52,10 +52,19 @@ function plugin_init()
 
 
 	$style_css = BLOCK_ADMIN_URL . 'build/style-index.css';
+	$editor_css = BLOCK_ADMIN_URL . 'build/index.css';
 	//Frontend Style
 	wp_register_style(
-		'create-block-block-name-editor-style',
+		'create-block-block-name-frontend-style',
 		$style_css,
+		array(),
+		BLOCK_VERSION
+	);
+
+	//Editor Style
+	wp_register_style(
+		'create-block-block-name-editor-style',
+		$editor_css,
 		array(),
 		BLOCK_VERSION
 	);
@@ -68,7 +77,7 @@ function plugin_init()
 				'editor_style' 	=> 'create-block-block-name-editor-style',
 				'render_callback' => function ($attributes, $content) {
 					if (!is_admin()) {
-						wp_enqueue_style('create-block-block-name-editor-style');
+						wp_enqueue_style('create-block-block-name-frontend-style');
 					}
 					return $content;
 				}

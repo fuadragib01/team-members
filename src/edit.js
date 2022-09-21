@@ -8,6 +8,7 @@ import {
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import { PanelBody, RangeControl } from "@wordpress/components";
+import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
     const { columns } = attributes;
@@ -33,6 +34,7 @@ export default function Edit({ attributes, setAttributes }) {
             </InspectorControls>
             <InnerBlocks
                 allowedBlocks={["plugin-slug/team-member"]}
+                orientation="horizontal"
                 template={[
                     ["plugin-slug/team-member"],
                     ["plugin-slug/team-member"],
