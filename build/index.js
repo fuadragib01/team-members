@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-    allowedBlocks: ["core/image"]
+    allowedBlocks: ["plugin-slug/team-member"]
   }));
 }
 
