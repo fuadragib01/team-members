@@ -95,8 +95,12 @@
 .block-editor-block-list__block.wp-block[data-type="plugin-slug/team-members"] > .block-editor-inner-blocks .block-editor-block-list__layout > [data-type="plugin-slug/team-member"] {
   margin-bottom: 20px;
 }
+.block-editor-block-list__block.wp-block[data-type="plugin-slug/team-members"] > .block-editor-inner-blocks .block-editor-block-list__layout > [data-type="plugin-slug/team-member"] .block-editor-media-placeholder {
+  margin-bottom: 20px;
+}
 .block-editor-block-list__block.wp-block[data-type="plugin-slug/team-members"] > .block-editor-inner-blocks .block-editor-block-list__layout > [data-type="plugin-slug/team-member"] .wp-block-plugin-slug-team-member-img {
   position: relative;
+  margin-bottom: 20px;
 }
 .block-editor-block-list__block.wp-block[data-type="plugin-slug/team-members"] > .block-editor-inner-blocks .block-editor-block-list__layout > [data-type="plugin-slug/team-member"] .wp-block-plugin-slug-team-member-img.is-loading {
   opacity: 0.3;

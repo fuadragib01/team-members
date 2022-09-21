@@ -28,8 +28,12 @@
         flex-wrap: wrap;
         > [data-type="plugin-slug/team-member"] {
             margin-bottom: 20px;
+            .block-editor-media-placeholder {
+                margin-bottom: 20px;
+            }
             .wp-block-plugin-slug-team-member-img {
                 position: relative;
+                margin-bottom: 20px;
                 &.is-loading {
                     opacity: 0.3;
                 }
