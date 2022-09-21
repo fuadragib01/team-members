@@ -1,8 +1,8 @@
 const attributes = {
-	// blockId attribute for making unique className and other uniqueness
-	blockId: {
-		type: "string",
-	},
+    columns: {
+        type: "number",
+        default: 2,
+    },
 };
 
 export default attributes;
