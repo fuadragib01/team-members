@@ -45,6 +45,13 @@ registerBlockType("plugin-slug/team-member", {
             selector: "img",
             attribute: "src",
         },
+        socialLinks: {
+            type: "array",
+            default: [
+                { link: "https://www.facebook.com", icon: "facebook" },
+                { link: "https://www.instagram.com", icon: "instagram" },
+            ],
+        },
     },
     description: __("A team member item", "team-members"),
     edit: Edit,

@@ -6,7 +6,7 @@
 	"textdomain": "team-members",
 	"keywords": ["team", "members", "block"],
 	"supports": {
-		"align": true
+		"align": ["full", "wide"]
 	},
 	"editorScript": "file:./build/index.js"
 }
