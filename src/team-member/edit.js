@@ -24,6 +24,7 @@ import {
 
 function Edit({ attributes, setAttributes, isSelected }) {
     const [blobURL, setBlobURL] = useState();
+    const [selectedLink, setSelectedLink] = useState();
     const { name, bio, imgAlt, imgUrl, imgId, socialLinks } = attributes;
 
     const onChangeName = (newName) => {
@@ -33,6 +34,7 @@ function Edit({ attributes, setAttributes, isSelected }) {
     const titleRef = useRef();
 
     const prevUrl = usePrevious(imgUrl);
+    const prevIsSelected = usePrevious(isSelected);
 
     const imageObject = useSelect(
         (select) => {
@@ -120,6 +122,12 @@ function Edit({ attributes, setAttributes, isSelected }) {
         }
     }, [imgUrl, prevUrl]);
 
+    useEffect(() => {
+        if (prevIsSelected && !isSelected) {
+            setSelectedLink();
+        }
+    });
+
     return (
         <>
             <InspectorControls>
@@ -201,8 +209,23 @@ function Edit({ attributes, setAttributes, isSelected }) {
                     <ul>
                         {socialLinks.map((item, index) => {
                             return (
-                                <li key={index}>
-                                    <Icon icon={item.icon} />
+                                <li
+                                    key={index}
+                                    className={
+                                        selectedLink === index
+                                            ? "is-selected"
+                                            : null
+                                    }
+                                >
+                                    <button
+                                        aria-label={__(
+                                            "Edit social links",
+                                            "team-members"
+                                        )}
+                                        onClick={() => setSelectedLink(index)}
+                                    >
+                                        <Icon icon={item.icon} />
+                                    </button>
                                 </li>
                             );
                         })}
