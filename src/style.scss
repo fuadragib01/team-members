@@ -25,5 +25,24 @@
             font-weight: 400;
             margin: 5px 0;
         }
+        .wp-block-plugin-slug-team-member-social-links {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 15px -5px 0;
+
+                li {
+                    display: inline-block;
+                    margin: 5px;
+
+                    span.dashicon {
+                        color: #4e4e4e;
+                    }
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }

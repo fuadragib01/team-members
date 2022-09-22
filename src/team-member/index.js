@@ -51,6 +51,19 @@ registerBlockType("plugin-slug/team-member", {
                 { link: "https://www.facebook.com", icon: "facebook" },
                 { link: "https://www.instagram.com", icon: "instagram" },
             ],
+            source: "query",
+            selector: ".wp-block-plugin-slug-team-member-social-links ul li",
+            query: {
+                icon: {
+                    source: "attribute",
+                    attribute: "data-icon",
+                },
+                link: {
+                    source: "attribute",
+                    selector: "a",
+                    attribute: "href",
+                },
+            },
         },
     },
     description: __("A team member item", "team-members"),

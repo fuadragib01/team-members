@@ -41,5 +41,20 @@
   font-weight: 400;
   margin: 5px 0;
 }
+.wp-block-plugin-slug-team-members .wp-block-plugin-slug-team-member .wp-block-plugin-slug-team-member-social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px -5px 0;
+}
+.wp-block-plugin-slug-team-members .wp-block-plugin-slug-team-member .wp-block-plugin-slug-team-member-social-links ul li {
+  display: inline-block;
+  margin: 5px;
+}
+.wp-block-plugin-slug-team-members .wp-block-plugin-slug-team-member .wp-block-plugin-slug-team-member-social-links ul li span.dashicon {
+  color: #4e4e4e;
+}
+.wp-block-plugin-slug-team-members .wp-block-plugin-slug-team-member .wp-block-plugin-slug-team-member-social-links ul li a {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

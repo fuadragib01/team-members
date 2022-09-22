@@ -20,6 +20,8 @@ import {
     SelectControl,
     Icon,
     Tooltip,
+    TextControl,
+    Button,
 } from "@wordpress/components";
 
 function Edit({ attributes, setAttributes, isSelected }) {
@@ -89,6 +91,22 @@ function Edit({ attributes, setAttributes, isSelected }) {
         });
     };
 
+    const updateSocialItem = (type, value) => {
+        const socialLinksCopy = [...socialLinks];
+        socialLinksCopy[selectedLink][type] = value;
+        setAttributes({ socialLinks: socialLinksCopy });
+    };
+
+    const removeSocialItem = () => {
+        setAttributes({
+            socialLinks: [
+                ...socialLinks.slice(0, selectedLink),
+                ...socialLinks.slice(selectedLink + 1),
+            ],
+        });
+        setSelectedLink();
+    };
+
     const onSelectURL = (newURL) => {
         setAttributes({ imgUrl: newURL, imgId: undefined, imgAlt: "" });
     };
@@ -99,6 +117,13 @@ function Edit({ attributes, setAttributes, isSelected }) {
             imgId: undefined,
             imgUrl: undefined,
         });
+    };
+
+    const addNewsocialItem = () => {
+        setAttributes({
+            socialLinks: [...socialLinks, { icon: "wordpress", link: "" }],
+        });
+        setSelectedLink(socialLinks.length);
     };
 
     useEffect(() => {
@@ -242,6 +267,7 @@ function Edit({ attributes, setAttributes, isSelected }) {
                                             "Add social links",
                                             "team-members"
                                         )}
+                                        onClick={addNewsocialItem}
                                     >
                                         <Icon icon="plus" />
                                     </button>
@@ -250,6 +276,28 @@ function Edit({ attributes, setAttributes, isSelected }) {
                         )}
                     </ul>
                 </div>
+                {selectedLink !== undefined && (
+                    <div className="wp-block-plugin-slug-team-member-link-form">
+                        <TextControl
+                            label={__("Icon", "team-members")}
+                            value={socialLinks[selectedLink].icon}
+                            onChange={(icon) => {
+                                updateSocialItem("icon", icon);
+                            }}
+                        />
+                        <TextControl
+                            label={__("URL", "team-members")}
+                            value={socialLinks[selectedLink].link}
+                            onChange={(link) => {
+                                updateSocialItem("link", link);
+                            }}
+                        />
+                        <br />
+                        <Button isDestructive onClick={removeSocialItem}>
+                            {__("Remove Link", "team-members")}
+                        </Button>
+                    </div>
+                )}
             </div>
         </>
     );
